@@ -7,20 +7,19 @@ export const createAvatar = ({
   name = "Michelle Appleton",
   date = "28 Jun 2020",
 }) => {
-  const avatar = document.createElement("div");
-  const avatarFigure = document.createElement("figure");
+  const avatar = document.createElement("figure");
+  const avatarThumbnail = document.createElement("div");
   const avatarImage = createIMG({ avatarURL, avatarALT });
-  console.log(avatarImage);
 
   const avatarFigcaption = document.createElement("figcaption");
   const avatarCaption = `<strong>${name}</strong><span>${date}</span>`;
 
   avatar.className = "avatar";
-  avatarFigure.className = "avatar-thumbnail";
+  avatarThumbnail.className = "avatar-thumbnail";
   avatarFigcaption.className = "avatar-caption";
 
-  avatarFigure.appendChild(avatarImage);
-  avatar.appendChild(avatarFigure);
+  avatarThumbnail.appendChild(avatarImage);
+  avatar.appendChild(avatarThumbnail);
 
   if (hasCaption) {
     avatarFigcaption.innerHTML = avatarCaption;

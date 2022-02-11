@@ -2,11 +2,25 @@ import { createIMG } from "./Image";
 
 // More on default export: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
 export default {
-  title: "Design System/Image Component",
+  title: "Design System/Atoms/Images",
+  /* parameters: {
+    docs: {
+      inlineStories: false,
+      description: {
+        component: "Basic images",
+      },
+    },
+  }, */
   // More on argTypes: https://storybook.js.org/docs/html/api/argtypes
   argTypes: {
-    imageURL: { control: "text" },
-    imageALT: { control: "text" },
+    imageURL: {
+      description: "Display the image by passing a `string` URL path",
+      control: "text",
+    },
+    imageALT: {
+      description: "Fallback ALT of image by passing a `string`",
+      control: "text",
+    },
   },
 };
 

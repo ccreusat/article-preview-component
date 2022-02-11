@@ -2,14 +2,29 @@ import { createAvatar } from "./Avatar";
 
 // More on default export: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
 export default {
-  title: "Design System/Avatar Component",
+  title: "Design System/Components/Avatar Component",
   // More on argTypes: https://storybook.js.org/docs/html/api/argtypes
   argTypes: {
-    hasCaption: { control: "boolean" },
-    name: { control: "text" },
-    date: { control: "text" },
-    avatarALT: { control: "text" },
-    avatarURL: { control: "text" },
+    hasCaption: {
+      description: "Display text of avatar component, `bool`",
+      control: "boolean",
+    },
+    name: {
+      description: "Person name in the component `string`",
+      control: "text",
+    },
+    date: {
+      description: "Publication date, pass a `string`",
+      control: "text",
+    },
+    avatarALT: {
+      description: "Fallback ALT, pass a `string`",
+      control: "text",
+    },
+    avatarURL: {
+      description: "Add image to the avatar with a `string` url path",
+      control: "text",
+    },
   },
   args: {
     hasCaption: false,

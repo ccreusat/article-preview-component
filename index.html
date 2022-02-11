@@ -17,7 +17,7 @@
   </head>
 
   <body>
-    <article class="card">
+    <main class="card">
       <div class="aspect-box">
         <img src="./images/drawers.jpg" alt="drawers" />
       </div>
@@ -33,26 +33,17 @@
           you make any room feel complete.
         </p>
 
-        <section
-          class="
-            is-display-flex
-            justify-content-between
-            align-items-center
-            has-margin-top-16
-          "
-        >
-          <div class="avatar">
-            <figure class="avatar-thumbnail">
-              <div class="aspect-box">
-                <img src="./images/avatar-michelle.jpg" alt="michelle" />
-              </div>
-            </figure>
+        <div class="card-bottom">
+          <figure class="avatar">
+            <div class="avatar-thumbnail">
+              <img src="./images/avatar-michelle.jpg" alt="michelle" />
+            </div>
             <figcaption class="avatar-caption">
               <strong>Michelle Appleton</strong>
               <span>28 Jun 2020</span>
             </figcaption>
-          </div>
-          <!-- <div class="share is-display-flex justify-content-between">
+          </figure>
+          <div class="share is-display-flex justify-content-between">
             <div class="is-display-flex share-icons">
               <span class="share-text">Share</span>
               <a href="#" class="share-link"
@@ -66,12 +57,17 @@
               /></a>
             </div>
             <button class="share-trigger">
-              <img src="./images/icon-share.svg" alt="share" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                <path
+                  fill="#6E8098"
+                  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                />
+              </svg>
             </button>
-          </div> -->
-        </section>
+          </div>
+        </div>
       </div>
-    </article>
+    </main>
     <script>
       const shareTrigger = document.querySelector(".share-trigger");
       const shareContainer = document.querySelector(".share");

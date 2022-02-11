@@ -1,18 +1,35 @@
 import { createCard } from "./Card";
 import * as ImageStories from "./Image.stories";
-import * as AvatarStories from "./Avatar.stories";
 
 // More on default export: https://storybook.js.org/docs/html/writing-stories/introduction#default-export
 export default {
-  title: "Design System/Card Component",
+  title: "Design System/Components/Card Component",
   // More on argTypes: https://storybook.js.org/docs/html/api/argtypes
   argTypes: {
-    hasCard: { control: "boolean" },
-    hasImage: { control: "boolean" },
-    hasContent: { control: "boolean" },
-    hasAvatar: { control: "boolean" },
-    title: { control: "text" },
-    text: { control: "text" },
+    hasCard: {
+      description: "Can display text and avatar elements: `boolean`",
+      control: "boolean",
+    },
+    hasImage: {
+      description: "To add an image to the component and display it: `boolean`",
+      control: "boolean",
+    },
+    hasContent: {
+      description: "Can enable or disable block text: `boolean`",
+      control: "boolean",
+    },
+    hasAvatar: {
+      description: "Can enable or disable avatar comp: `boolean` URL path",
+      control: "boolean",
+    },
+    title: {
+      description: "Title of the card component: `string` URL path",
+      control: "text",
+    },
+    text: {
+      description: "Text of the card component: `string`",
+      control: "text",
+    },
   },
   args: {
     url: "/drawers.jpg",
@@ -40,7 +57,6 @@ const Template = ({ ...args }) => {
 };
 
 const TemplateWithHTML = args => {
-  console.log(args);
   return `<article class="card">
     <div class="aspect-box">
       <img src="${args.url}" alt="${args.alt}">

@@ -6,18 +6,21 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook-docs": "start-storybook --docs --no-manager-cache",
+    "build-storybook-docs": "build-storybook --docs",
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=7db908f658b5"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.17.2",
+    "@storybook/addon-a11y": "^6.4.19",
     "@storybook/addon-actions": "^6.4.18",
     "@storybook/addon-essentials": "^6.4.18",
     "@storybook/addon-links": "^6.4.18",
     "@storybook/html": "^6.4.18",
     "babel-loader": "^8.2.3",
     "chromatic": "^6.4.3"
-  },
-  "dependencies": {}
+  }
 }
